@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% if is_login %}
+        欢迎{{ user.username }},来到脸盆网!
+        <a href="{% url 'app:logout' %}">退出</a>
+        {% else %}
+        <a href="">登录</a>
+        <a href="{% url 'app:register' %}">注册</a>
+
+    {% endif %}
+
+
+</body>
+</html>
